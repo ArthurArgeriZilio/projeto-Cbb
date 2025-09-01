@@ -32,6 +32,17 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
+.env.production
+
+# Google Calendar credentials (sensitive)
+credentials.json
+token.json
+service-account.json
+
+# IDE specific files
+.vscode/settings.json
+.idea/
 
 # vercel
 .vercel
