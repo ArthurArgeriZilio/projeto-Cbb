@@ -1,8 +1,8 @@
-# 💈 Elite Barber - Sistema de Agendamento
+#  Elite Barber - Sistema de Agendamento
 
 Sistema completo de barbearia com integração ao Google Calendar para agendamentos online.
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 - **Site responsivo** com design masculino moderno
 - **Sistema de agendamento** integrado ao Google Calendar
@@ -10,7 +10,7 @@ Sistema completo de barbearia com integração ao Google Calendar para agendamen
 - **Galeria de serviços** com preços
 - **Interface administrativa** para gerenciar agendamentos
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Next.js 14** - Framework React com App Router
 - **TypeScript** - Tipagem estática
@@ -21,7 +21,7 @@ Sistema completo de barbearia com integração ao Google Calendar para agendamen
 - **React Hook Form** - Gerenciamento de formulários
 - **Zod** - Validação de schemas
 
-## ⚙️ Configuração do Google Calendar
+##  Configuração do Google Calendar
 
 Para configurar a integração com o Google Calendar, siga estes passos:
 
@@ -87,11 +87,11 @@ curl -X POST https://oauth2.googleapis.com/token \
 2. Vá para "Settings" > "Settings for my calendars"
 3. Selecione o calendário desejado
 4. Copie o "Calendar ID" (geralmente é seu email)
-- ⚡ **Performance**: Otimizado com Next.js 14 e Turbopack
-- 🎭 **Animações**: Transições fluidas com Framer Motion
-- 🎯 **SEO Otimizado**: Meta tags e estrutura otimizada para buscadores
+-  **Performance**: Otimizado com Next.js 14 e Turbopack
+-  **Animações**: Transições fluidas com Framer Motion
+-  **SEO Otimizado**: Meta tags e estrutura otimizada para buscadores
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Framework**: Next.js 14 (App Router)
 - **Linguagem**: TypeScript
@@ -102,7 +102,7 @@ curl -X POST https://oauth2.googleapis.com/token \
 - **Ícones**: Lucide React
 - **Build Tool**: Turbopack
 
-## 🚀 Como Executar
+##  Como Executar
 
 1. **Instalar dependências:**
    ```bash
@@ -121,27 +121,27 @@ curl -X POST https://oauth2.googleapis.com/token \
 
 O site estará disponível em [http://localhost:3000](http://localhost:3000)
 
-## 📋 Funcionalidades Implementadas
+##  Funcionalidades Implementadas
 
 ### Página Inicial
-- ✅ Hero Section com CTA atrativo
-- ✅ Seção de estatísticas
-- ✅ Cards de serviços principais
-- ✅ Depoimentos de clientes
-- ✅ Call-to-action final
+-  Hero Section com CTA atrativo
+-  Seção de estatísticas
+-  Cards de serviços principais
+-  Depoimentos de clientes
+-  Call-to-action final
 
 ### Layout
-- ✅ Navbar responsiva com menu mobile
-- ✅ Footer completo com links e informações
-- ✅ Tipografia elegante (Inter + Playfair Display)
+-  Navbar responsiva com menu mobile
+-  Footer completo com links e informações
+-  Tipografia elegante (Inter + Playfair Display)
 
 ### Design System
-- ✅ Paleta de cores slate/zinc (masculina)
-- ✅ Componentes reutilizáveis
-- ✅ Animações e transições
-- ✅ Responsividade completa
+-  Paleta de cores slate/zinc (masculina)
+-  Componentes reutilizáveis
+-  Animações e transições
+-  Responsividade completa
 
-## 📋 Próximos Passos
+##  Próximos Passos
 
 ### Páginas a Implementar
 - [ ] Página Sobre Nós
