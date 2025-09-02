@@ -1,11 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Configuração condicional baseada na plataforma
+  ...(process.env.GITHUB_ACTIONS && {
+    output: 'export',
+    trailingSlash: true,
+    basePath: '/projeto-Cbb',
+    assetPrefix: '/projeto-Cbb/',
+  }),
+  
   images: {
-    unoptimized: true
+    unoptimized: process.env.GITHUB_ACTIONS ? true : false
   },
-  // Desabilita funcionalidades do servidor para GitHub Pages
+  
+  // Configuração padrão para desenvolvimento e Vercel
   experimental: {
     turbo: {
       rules: {
@@ -16,9 +23,6 @@ const nextConfig = {
       },
     },
   },
-  // Configuração para GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/projeto-Cbb' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/projeto-Cbb/' : '',
 }
 
 module.exports = nextConfig
