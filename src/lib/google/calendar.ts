@@ -195,7 +195,7 @@ export async function rescheduleCalendarEvent(
 // Função para gerar horários disponíveis
 export function generateAvailableSlots(
   date: string,
-  existingEvents: any[] = [],
+  existingEvents: Array<{ start: { dateTime?: string }; end: { dateTime?: string } }> = [],
   workingHours = { start: '08:00', end: '18:00' },
   slotDuration = 60 // minutos
 ) {

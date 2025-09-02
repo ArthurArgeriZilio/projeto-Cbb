@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { 
   Calendar, 
   Settings, 
@@ -89,11 +88,11 @@ export default function ConfiguracaoPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Vá para "APIs & Services" → "Library"</span>
+                    <span>Vá para &quot;APIs &amp; Services&quot; → &quot;Library&quot;</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Procure e habilite a "Google Calendar API"</span>
+                    <span>Procure e habilite a &quot;Google Calendar API&quot;</span>
                   </li>
                 </ol>
               </CardContent>
@@ -113,15 +112,15 @@ export default function ConfiguracaoPage() {
                 <ol className="space-y-3 text-slate-300">
                   <li className="flex items-start gap-3">
                     <Key className="h-5 w-5 text-blue-500 mt-0.5" />
-                    <span>Vá para "APIs & Services" → "Credentials"</span>
+                    <span>Vá para &quot;APIs &amp; Services&quot; → &quot;Credentials&quot;</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Key className="h-5 w-5 text-blue-500 mt-0.5" />
-                    <span>Clique em "Create Credentials" → "OAuth 2.0 Client IDs"</span>
+                    <span>Clique em &quot;Create Credentials&quot; → &quot;OAuth 2.0 Client IDs&quot;</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Key className="h-5 w-5 text-blue-500 mt-0.5" />
-                    <span>Configure como "Web application"</span>
+                    <span>Configure como &quot;Web application&quot;</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Key className="h-5 w-5 text-blue-500 mt-0.5" />

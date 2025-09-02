@@ -11,18 +11,6 @@ const nextConfig = {
   images: {
     unoptimized: process.env.GITHUB_ACTIONS ? true : false
   },
-  
-  // Configuração padrão para desenvolvimento e Vercel
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
 }
 
 module.exports = nextConfig
