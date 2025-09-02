@@ -28,7 +28,7 @@ export default function AgendamentoPage() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
                     <Star className="h-5 w-5 text-yellow-500" />
-                    Elite Barber
+                    Dom Luis Barbearia
                   </CardTitle>
                   <CardDescription className="text-slate-300">
                     Sua barbearia de confiança

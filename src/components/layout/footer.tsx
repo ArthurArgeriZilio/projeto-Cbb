@@ -21,7 +21,7 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <Scissors className="h-8 w-8 text-slate-400" />
               <span className="text-2xl font-playfair font-bold bg-gradient-to-r from-slate-400 to-zinc-400 bg-clip-text text-transparent">
-                Elite Barber
+                Dom Luis Barbearia
               </span>
             </div>
             <p className="text-gray-300 leading-relaxed">
@@ -91,7 +91,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-slate-400" />
-                <span className="text-gray-300 text-sm">contato@elitebarber.com</span>
+                <span className="text-gray-300 text-sm">contato@domluisbarbearia.com</span>
               </div>
             </div>
             <div className="pt-4">
@@ -135,7 +135,7 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 Elite Barber. Todos os direitos reservados.
+              © 2024 Dom Luis Barbearia. Todos os direitos reservados.
             </p>
             <div className="flex items-center space-x-1 text-gray-400 text-sm">
               <span>Feito com</span>

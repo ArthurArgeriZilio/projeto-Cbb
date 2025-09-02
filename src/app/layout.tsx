@@ -12,9 +12,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Elite Barber - Barbearia Premium",
-  description: "Barbearia premium com agendamento online e produtos masculinos exclusivos. Transforme seu estilo conosco!",
-  keywords: "barbearia, barbeiro, corte masculino, agendamento online, produtos masculinos, barba",
+  title: "Dom Luis Barbearia - Tradição e Estilo Masculino",
+  description: "A melhor barbearia da cidade. Cortes modernos, barbas impecáveis e tratamentos especiais para o homem moderno. Agende online!",
 };
 
 export default function RootLayout({

@@ -37,7 +37,7 @@ export function Navbar() {
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
             </div>
             <span className="text-2xl font-playfair font-bold bg-gradient-to-r from-slate-700 to-zinc-800 bg-clip-text text-transparent">
-              Elite Barber
+              Dom Luis Barbearia
             </span>
           </Link>
 

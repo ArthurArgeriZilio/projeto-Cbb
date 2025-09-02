@@ -1,4 +1,4 @@
-# 💈 Elite Barber - Sistema de Agendamento
+# 💈 Dom Luis Barbearia - Sistema de Agendamento
 
 Sistema completo de barbearia com integração ao Google Calendar para agendamentos online.
 

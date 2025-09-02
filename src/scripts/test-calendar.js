@@ -70,7 +70,7 @@ async function testConnection() {
     // Teste 4: Criar evento de teste (opcional)
     console.log('\n4️⃣ Criando evento de teste...');
     const testEvent = {
-      summary: 'Teste - Elite Barber',
+      summary: 'Teste - Dom Luis Barbearia',
       description: 'Evento de teste criado pelo sistema',
       start: {
         dateTime: new Date(Date.now() + 60 * 60 * 1000).toISOString(), // 1 hora a partir de agora
@@ -141,7 +141,7 @@ function checkEnvironment() {
 }
 
 async function main() {
-  console.log('🧪 Teste de Integração Google Calendar - Elite Barber\n');
+  console.log('🧪 Teste de Integração Google Calendar - Dom Luis Barbearia\n');
   
   if (!checkEnvironment()) {
     return;

@@ -105,7 +105,7 @@ export const businessHours = {
 };
 
 export const businessInfo = {
-  name: 'Elite Barber',
+  name: 'Dom Luis Barbearia',
   address: {
     street: 'Rua das Flores, 123',
     neighborhood: 'Centro',
@@ -114,10 +114,10 @@ export const businessInfo = {
     zipCode: '01234-567'
   },
   phone: '(11) 99999-9999',
-  email: 'contato@elitebarber.com',
+  email: 'contato@domluisbarbearia.com',
   social: {
-    instagram: '@elitebarber',
-    facebook: 'Elite Barber SP',
+    instagram: '@domluisbarbearia',
+    facebook: 'Dom Luis Barbearia SP',
     whatsapp: '5511999999999'
   }
 };
