@@ -81,13 +81,13 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-slate-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  Rua dos Barbeiros, 456<br />
-                  Centro - São Paulo, SP
+                  R. Genoveva Onófre Barban, 892<br />
+                  Planalto Verde - Ribeirão Preto, SP
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-slate-400" />
-                <span className="text-gray-300 text-sm">(11) 9999-9999</span>
+                <span className="text-gray-300 text-sm">(16) 99396-3867</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-slate-400" />

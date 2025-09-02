@@ -40,9 +40,9 @@ export default function AgendamentoPage() {
                     <div>
                       <p className="text-white font-medium">Endereço</p>
                       <p className="text-slate-300 text-sm">
-                        Rua das Flores, 123<br />
-                        Centro, São Paulo - SP<br />
-                        CEP: 01234-567
+                        R. Genoveva Onófre Barban, 892<br />
+                        Planalto Verde, Ribeirão Preto - SP<br />
+                        CEP: 14056-340
                       </p>
                     </div>
                   </div>
@@ -51,7 +51,7 @@ export default function AgendamentoPage() {
                     <Phone className="h-5 w-5 text-slate-400" />
                     <div>
                       <p className="text-white font-medium">Telefone</p>
-                      <p className="text-slate-300 text-sm">(11) 99999-9999</p>
+                      <p className="text-slate-300 text-sm">(16) 99396-3867</p>
                     </div>
                   </div>
 
@@ -82,19 +82,19 @@ export default function AgendamentoPage() {
                     <div className="flex justify-between items-center">
                       <span className="text-white">Corte Masculino</span>
                       <Badge variant="secondary" className="bg-slate-700 text-slate-200">
-                        R$ 25
+                        R$ 35
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white">Barba</span>
                       <Badge variant="secondary" className="bg-slate-700 text-slate-200">
-                        R$ 20
+                        R$ 30
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white">Corte + Barba</span>
                       <Badge variant="secondary" className="bg-slate-700 text-slate-200">
-                        R$ 40
+                        R$ 60
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
@@ -104,9 +104,9 @@ export default function AgendamentoPage() {
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-white">Tratamento Capilar</span>
+                      <span className="text-white">Luzes</span>
                       <Badge variant="secondary" className="bg-slate-700 text-slate-200">
-                        R$ 35
+                        R$ 80
                       </Badge>
                     </div>
                   </div>

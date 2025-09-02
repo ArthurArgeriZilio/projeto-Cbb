@@ -21,24 +21,24 @@ export const services: Service[] = [
     id: 'corte-masculino',
     name: 'Corte Masculino',
     description: 'Corte moderno e personalizado para seu estilo',
-    duration: 30,
-    price: 25,
+    duration: 45,
+    price: 35,
     category: 'cut'
   },
   {
     id: 'barba',
     name: 'Barba',
     description: 'Aparar e modelar a barba com precisão',
-    duration: 20,
-    price: 20,
+    duration: 30,
+    price: 30,
     category: 'beard'
   },
   {
     id: 'corte-barba',
     name: 'Corte + Barba',
     description: 'Combo completo para um visual impecável',
-    duration: 45,
-    price: 40,
+    duration: 75,
+    price: 60,
     category: 'combo'
   },
   {
@@ -50,20 +50,12 @@ export const services: Service[] = [
     category: 'treatment'
   },
   {
-    id: 'tratamento-capilar',
-    name: 'Tratamento Capilar',
-    description: 'Hidratação e cuidados especiais para o cabelo',
-    duration: 40,
-    price: 35,
+    id: 'luzes',
+    name: 'Luzes',
+    description: 'Luzes e mechas para um visual moderno',
+    duration: 90,
+    price: 80,
     category: 'treatment'
-  },
-  {
-    id: 'barba-completa',
-    name: 'Barba Completa',
-    description: 'Barba com navalha, loção pós-barba e relaxamento',
-    duration: 35,
-    price: 30,
-    category: 'beard'
   }
 ];
 
@@ -107,17 +99,17 @@ export const businessHours = {
 export const businessInfo = {
   name: 'Dom Luis Barbearia',
   address: {
-    street: 'Rua das Flores, 123',
-    neighborhood: 'Centro',
-    city: 'São Paulo',
+    street: 'R. Genoveva Onófre Barban, 892',
+    neighborhood: 'Planalto Verde',
+    city: 'Ribeirão Preto',
     state: 'SP',
-    zipCode: '01234-567'
+    zipCode: '14056-340'
   },
-  phone: '(11) 99999-9999',
+  phone: '(16) 99396-3867',
   email: 'contato@domluisbarbearia.com',
   social: {
     instagram: '@domluisbarbearia',
-    facebook: 'Dom Luis Barbearia SP',
-    whatsapp: '5511999999999'
+    facebook: 'Dom Luis Barbearia RP',
+    whatsapp: '5516993963867'
   }
 };

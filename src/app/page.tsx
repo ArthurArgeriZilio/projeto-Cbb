@@ -27,21 +27,21 @@ export default function HomePage() {
       icon: Scissors,
       title: "Corte Masculino",
       description: "Cortes modernos e clássicos executados por barbeiros especializados",
-      price: "A partir de R$ 40",
+      price: "R$ 35",
       image: "✂️"
     },
     {
       icon: Zap,
       title: "Barba & Bigode",
       description: "Desenho e manutenção de barba com técnicas tradicionais e modernas",
-      price: "A partir de R$ 30",
+      price: "R$ 30",
       image: "🧔"
     },
     {
       icon: Shield,
-      title: "Tratamentos",
-      description: "Cuidados especiais para cabelo e couro cabeludo masculino",
-      price: "A partir de R$ 50",
+      title: "Corte + Barba",
+      description: "Combo completo para um visual impecável e moderno",
+      price: "R$ 60",
       image: "💪"
     }
   ];
