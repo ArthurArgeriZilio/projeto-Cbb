@@ -1,6 +1,5 @@
 "use client";
 
-import { CalEmbed } from "@/components/booking/cal-embed";
 import { CalEmbedSimple } from "@/components/booking/cal-embed-simple";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
