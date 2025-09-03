@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { QuickBookingSection } from "@/components/booking/quick-booking-section";
 import { 
   Calendar, 
   ShoppingCart, 
@@ -294,6 +295,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Booking Section */}
+      <QuickBookingSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-700 to-zinc-800 text-white">

@@ -1,11 +1,27 @@
 "use client";
 
-import { BookingForm } from "@/components/booking/booking-form";
+import { CalEmbed } from "@/components/booking/cal-embed";
+import { CalEmbedSimple } from "@/components/booking/cal-embed-simple";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, MapPin, Phone, Star } from "lucide-react";
+import { Clock, MapPin, Phone, Star, Calendar } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function AgendamentoPage() {
+function AgendamentoContent() {
+  const searchParams = useSearchParams();
+  const service = searchParams.get('service') as "corte" | "barba" | "corteBarba" | "sobrancelha" | null;
+
+  const getServiceTitle = () => {
+    switch (service) {
+      case 'corte': return 'Corte Masculino';
+      case 'barba': return 'Barba Completa';
+      case 'corteBarba': return 'Corte + Barba';
+      case 'sobrancelha': return 'Sobrancelha';
+      default: return 'Agende seu Horário';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8">
       <div className="container mx-auto px-4">
@@ -13,11 +29,13 @@ export default function AgendamentoPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Agende seu Horário
+              {getServiceTitle()}
             </h1>
             <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-              Reserve seu atendimento com nossos especialistas. Escolha o serviço,
-              data e horário que melhor se adequam à sua agenda.
+              {service 
+                ? `Reserve seu horário para ${getServiceTitle().toLowerCase()}`
+                : "Reserve seu atendimento com nossos especialistas. Escolha o serviço, data e horário que melhor se adequam à sua agenda."
+              }
             </p>
           </div>
 
@@ -114,13 +132,41 @@ export default function AgendamentoPage() {
               </Card>
             </div>
 
-            {/* Formulário de Agendamento */}
+            {/* Agendamento Cal.com */}
             <div className="lg:col-span-2">
-              <BookingForm />
+              <Card className="bg-slate-800/50 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <Calendar className="h-5 w-5 text-blue-500" />
+                    Agende seu Horário
+                  </CardTitle>
+                  <CardDescription className="text-slate-300">
+                    Escolha o melhor horário para seu atendimento
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <CalEmbedSimple 
+                    service={service || undefined}
+                    className="rounded-lg"
+                  />
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AgendamentoPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 flex items-center justify-center">
+        <div className="text-white">Carregando...</div>
+      </div>
+    }>
+      <AgendamentoContent />
+    </Suspense>
   );
 }
