@@ -1,8 +1,10 @@
-# 💈 Dom Luis Barbearia - Sistema de Agendamento
+# Dom Luis Barbearia - Sistema de Agendamento
 
 Sistema completo de barbearia com integração ao Google Calendar para agendamentos online.
 
-##  Funcionalidades
+Site disponível em: https://arthurargerzilio.github.io/projeto-Cbb/
+
+## Funcionalidades
 
 - **Site responsivo** com design masculino moderno
 - **Sistema de agendamento** integrado ao Google Calendar
