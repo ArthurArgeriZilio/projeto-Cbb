@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createCalendarEvent, BookingData } from '@/lib/google/calendar';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export async function POST(request: NextRequest) {
   try {
     const bookingData: BookingData = await request.json();

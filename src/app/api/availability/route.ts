@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCalendarEvents, generateAvailableSlots } from '@/lib/google/calendar';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
@@ -24,7 +27,13 @@ export async function GET(request: NextRequest) {
     }
 
     // Gerar horários disponíveis
-    const availableSlots = generateAvailableSlots(date, eventsResult.events);
+    const availableSlots = generateAvailableSlots(
+      date, 
+      eventsResult.events?.map(event => ({
+        start: { dateTime: event.start?.dateTime || undefined },
+        end: { dateTime: event.end?.dateTime || undefined }
+      })) || []
+    );
 
     return NextResponse.json({
       success: true,
