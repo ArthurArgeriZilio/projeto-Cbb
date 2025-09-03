@@ -2,7 +2,6 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  distDir: 'docs',
   basePath: process.env.GITHUB_ACTIONS ? '/projeto-Cbb' : '',
   assetPrefix: process.env.GITHUB_ACTIONS ? '/projeto-Cbb/' : '',
   images: {
