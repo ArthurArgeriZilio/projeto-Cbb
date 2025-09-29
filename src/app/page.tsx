@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -26,7 +27,6 @@ export default function HomePage() {
     {
       name: "Luis",
       avatar: "L",
-      calUrl: "https://cal.com/luis/barbearia",
       specialty: "Cortes Modernos",
       rating: 5.0,
       experience: "8 anos",
@@ -35,7 +35,6 @@ export default function HomePage() {
     {
       name: "Marcos",
       avatar: "M",
-      calUrl: "https://cal.com/marcos/barbearia",
       specialty: "Barba & Desenho",
       rating: 5.0,
       experience: "6 anos",
@@ -167,17 +166,12 @@ export default function HomePage() {
                     <div className="text-xl font-bold text-orange-500 mb-4">{barber.price}</div>
 
                     {/* Action Button */}
-                    <a
-                      href={barber.calUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
+                    <Link href="/agendamento" className="w-full">
                       <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-4 text-sm md:text-base transition-all duration-300 transform hover:scale-105 min-h-[48px]">
                         <Calendar className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                         Agendar com {barber.name}
                       </Button>
-                    </a>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
