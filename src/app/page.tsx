@@ -15,7 +15,8 @@ import {
   Scissors,
   Zap,
   User,
-  Eye
+  Eye,
+  Mail
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -194,7 +195,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-white text-center mb-6">Nos Siga nas Redes</h2>
           <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
             <a
-              href="https://instagram.com/domluisbarbearia"
+              href="https://www.instagram.com/domluis_barbearia?igsh=dHR4Z2t2ZDBlM3Nn"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1"
@@ -231,50 +232,86 @@ export default function HomePage() {
 
       </main>
 
-      {/* Footer with Contact Info */}
+      {/* Footer with Complete Information */}
       <footer className="bg-slate-900/50 border-t border-slate-800 py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="bg-slate-800/30 rounded-2xl p-6 backdrop-blur-sm border border-slate-700"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-              <div>
-                <MapPin className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-                <h4 className="text-white font-semibold mb-1 text-sm">Localização</h4>
-                <p className="text-slate-300 text-xs">R. Genoveva Onófre Barban, 892<br />Planalto Verde - Ribeirão Preto, SP</p>
-              </div>
-              <div>
-                <Clock className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-                <h4 className="text-white font-semibold mb-1 text-sm">Horário</h4>
-                <p className="text-slate-300 text-xs">Seg - Sex: 9h às 19h<br />Sáb: 8h às 17h<br />Dom: Fechado</p>
-              </div>
-              <div>
-                <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-                <h4 className="text-white font-semibold mb-1 text-sm">Marcos</h4>
-                <p className="text-slate-300 text-xs">(16) 99637-0028</p>
-              </div>
-              <div>
-                <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-                <h4 className="text-white font-semibold mb-1 text-sm">Luiz</h4>
-                <p className="text-slate-300 text-xs">(16) 99149-5360</p>
-              </div>
-              <div>
-                <Instagram className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-                <h4 className="text-white font-semibold mb-1 text-sm">Instagram</h4>
-                <a 
-                  href="https://www.instagram.com/domluis_barbearia/" 
-                  target="_blank" 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left Column - About */}
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Scissors className="h-5 w-5 text-orange-500" />
+                Dom Luis Barbearia
+              </h3>
+              <p className="text-slate-300 mb-4">
+                Tradição e modernidade em cortes masculinos. Mais de 10 anos oferecendo o melhor em estilo e cuidado masculino.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.instagram.com/domluis_barbearia?igsh=dHR4Z2t2ZDBlM3Nn"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-300 text-xs hover:text-orange-500 transition-colors"
+                  className="text-slate-400 hover:text-orange-500 transition-colors"
                 >
-                  @domluis_barbearia
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://facebook.com/domluisbarbearia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-orange-500 transition-colors"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://wa.me/5516993963867"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-orange-500 transition-colors"
+                >
+                  <MessageCircle className="h-5 w-5" />
                 </a>
               </div>
             </div>
-          </motion.div>
+
+            {/* Right Column - Contact */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4 text-orange-500">Contato</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-orange-500 mt-0.5" />
+                  <div>
+                    <p className="text-white font-medium">R. Genoveva Onófre Barban, 892</p>
+                    <p className="text-slate-300 text-sm">Planalto Verde - Ribeirão Preto, SP</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-orange-500" />
+                  <p className="text-slate-300">(16) 99396-3867</p>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-orange-500" />
+                  <p className="text-slate-300">contato@domluisbarbearia.com</p>
+                </div>
+                
+                <div className="mt-4">
+                  <p className="text-orange-500 font-medium mb-2">Horário de Funcionamento:</p>
+                  <div className="text-slate-300 text-sm space-y-1">
+                    <p>Seg - Sex: 9h às 19h</p>
+                    <p>Sáb: 8h às 17h</p>
+                    <p>Dom: Fechado</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-slate-700 mt-8 pt-6 text-center">
+            <p className="text-slate-400 text-sm">
+              © 2024 Dom Luis Barbearia - Todos os direitos reservados
+            </p>
+          </div>
         </div>
       </footer>
     </div>

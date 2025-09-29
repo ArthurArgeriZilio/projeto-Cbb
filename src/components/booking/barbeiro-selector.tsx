@@ -137,7 +137,7 @@ export function BarbeiroSelector({ service, className = "" }: BarbeiroSelectorPr
 
       <div className="mt-8 p-4 bg-slate-800/30 rounded-lg border border-slate-700/50">
         <p className="text-slate-300 text-sm text-center">
-          💡 <strong>Dica:</strong> Ambos os profissionais oferecem os mesmos serviços com excelência. 
+          <strong>Dica:</strong> Ambos os profissionais oferecem os mesmos serviços com excelência. 
           Escolha baseado na sua preferência de horário ou barbeiro de confiança!
         </p>
       </div>

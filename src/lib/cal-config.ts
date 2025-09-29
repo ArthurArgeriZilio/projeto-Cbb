@@ -6,7 +6,7 @@ export const calConfig = {
       nome: "Luiz",
       username: "arthur-argeri-gz0ern",
       especialidade: "Cortes clássicos e modernos",
-      foto: "👨‍🦲",
+      foto: "L",
       telefone: "(16) 99149-5360",
       services: {
         corte: "arthur-argeri-gz0ern/corte-masculino",
@@ -19,7 +19,7 @@ export const calConfig = {
       nome: "Marcos",
       username: "arthur-argeri-gz0ern",
       especialidade: "Barbas e acabamentos",
-      foto: "👨‍🦱", 
+      foto: "M", 
       telefone: "(16) 99637-0028",
       services: {
         corte: "arthur-argeri-gz0ern/corte-masculino",
