@@ -39,21 +39,30 @@ export function BarbeiroSelector({ service, className = "" }: BarbeiroSelectorPr
 
     return (
       <div className={className}>
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="text-2xl">{barbeiro?.foto}</div>
-            <div>
-              <h3 className="text-xl font-bold text-white">{barbeiro?.nome}</h3>
-              <p className="text-slate-400 text-sm">{barbeiro?.especialidade}</p>
+        <div className="mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                {barbeiro?.foto}
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">{barbeiro?.nome}</h3>
+                <p className="text-slate-400 text-sm">{barbeiro?.especialidade}</p>
+              </div>
             </div>
+            <Button
+              variant="outline"
+              onClick={() => setBarbeiroSelecionado(null)}
+              className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-colors px-4 py-2"
+            >
+              ← Trocar Barbeiro
+            </Button>
           </div>
-          <Button
-            variant="outline"
-            onClick={() => setBarbeiroSelecionado(null)}
-            className="border-slate-600 text-slate-300 hover:bg-slate-700"
-          >
-            Trocar Barbeiro
-          </Button>
+          <div className="border-t border-slate-700 pt-4">
+            <p className="text-slate-300 text-sm mb-4">
+              Você selecionou {barbeiro?.nome}. Escolha um horário disponível abaixo:
+            </p>
+          </div>
         </div>
 
         <CalEmbedSimple 
