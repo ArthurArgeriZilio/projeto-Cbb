@@ -116,14 +116,14 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-6 md:mb-8 px-4"
         >
           <h2 className="text-2xl font-bold text-white mb-3">Escolha seu Barbeiro</h2>
           <p className="text-slate-300 text-sm">Agende direto com o profissional de sua preferência</p>
         </motion.div>
 
         {/* Barbers Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto px-4 md:px-0">
           {barbers.map((barber, index) => (
             <motion.div
               key={barber.name}
@@ -132,7 +132,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 hover:border-orange-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10">
-                <CardContent className="p-6">
+                <CardContent className="p-4 md:p-6">
                   <div className="flex flex-col items-center text-center">
                     {/* Avatar */}
                     <div className="relative mb-4">
@@ -172,8 +172,8 @@ export default function HomePage() {
                       rel="noopener noreferrer"
                       className="w-full"
                     >
-                      <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 text-base transition-all duration-300 transform hover:scale-105">
-                        <Calendar className="h-5 w-5 mr-2" />
+                      <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-4 text-sm md:text-base transition-all duration-300 transform hover:scale-105 min-h-[48px]">
+                        <Calendar className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                         Agendar com {barber.name}
                       </Button>
                     </a>
@@ -229,14 +229,14 @@ export default function HomePage() {
           </div>
         </motion.div>
 
-        {/* Info Section */}
+        {/* Contact Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="bg-slate-800/30 rounded-2xl p-6 backdrop-blur-sm border border-slate-700"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
             <div>
               <MapPin className="h-6 w-6 text-orange-500 mx-auto mb-2" />
               <h4 className="text-white font-semibold mb-1 text-sm">Localização</h4>
@@ -245,12 +245,29 @@ export default function HomePage() {
             <div>
               <Clock className="h-6 w-6 text-orange-500 mx-auto mb-2" />
               <h4 className="text-white font-semibold mb-1 text-sm">Horário</h4>
-              <p className="text-slate-300 text-xs">Seg - Sex: 09h às 20h<br />Sáb: 09h às 19h</p>
+              <p className="text-slate-300 text-xs">Seg - Sex: 9h às 19h<br />Sáb: 8h às 17h<br />Dom: Fechado</p>
             </div>
             <div>
-              <Phone className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-              <h4 className="text-white font-semibold mb-1 text-sm">Contato</h4>
-              <p className="text-slate-300 text-xs">(16) 99396-3867<br />contato@domluisbarbearia.com</p>
+              <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+              <h4 className="text-white font-semibold mb-1 text-sm">Marcos</h4>
+              <p className="text-slate-300 text-xs">(16) 99637-0028</p>
+            </div>
+            <div>
+              <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+              <h4 className="text-white font-semibold mb-1 text-sm">Luiz</h4>
+              <p className="text-slate-300 text-xs">(16) 99149-5360</p>
+            </div>
+            <div>
+              <Instagram className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+              <h4 className="text-white font-semibold mb-1 text-sm">Instagram</h4>
+              <a 
+                href="https://www.instagram.com/domluis_barbearia?igsh=dHR4Z2t2ZDBlM3Nn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-300 text-xs hover:text-orange-500 transition-colors"
+              >
+                @domluis_barbearia
+              </a>
             </div>
           </div>
         </motion.div>

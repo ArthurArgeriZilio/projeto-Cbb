@@ -67,8 +67,11 @@ function AgendamentoContent() {
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-slate-400" />
                     <div>
-                      <p className="text-white font-medium">Telefone</p>
-                      <p className="text-slate-300 text-sm">(16) 99396-3867</p>
+                      <p className="text-white font-medium">Contato dos Barbeiros</p>
+                      <div className="text-slate-300 text-sm space-y-1">
+                        <p>Luiz: (16) 99149-5360</p>
+                        <p>Marcos: (16) 99637-0028</p>
+                      </div>
                     </div>
                   </div>
 
@@ -151,6 +154,32 @@ function AgendamentoContent() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          {/* Mapa na parte inferior */}
+          <div className="mt-8">
+            <Card className="bg-slate-800/50 border-slate-700">
+              <CardHeader>
+                <CardTitle className="text-white">Nossa Localização</CardTitle>
+                <CardDescription className="text-slate-300">
+                  Encontre nossa barbearia facilmente no mapa
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="h-96 rounded-xl overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.5396832984937!2d-47.82089312375655!3d-21.217772580485546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9be1c7f3e2b8b%3A0x8b8b8b8b8b8b8b8b!2sR.%20Genoveva%20On%C3%B3fre%20Barban%2C%20892%20-%20Planalto%20Verde%2C%20Ribeir%C3%A3o%20Preto%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-xl"
+                  />
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

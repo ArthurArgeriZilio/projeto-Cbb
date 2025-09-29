@@ -3,10 +3,11 @@ export const calConfig = {
   // Configurações dos barbeiros
   barbeiros: {
     barbeiro1: {
-      nome: "Dom Luis",
-      username: "arthur-argeri-gz0ern", // ✅ CONFIGURADO!
+      nome: "Luiz",
+      username: "arthur-argeri-gz0ern",
       especialidade: "Cortes clássicos e modernos",
       foto: "👨‍🦲",
+      telefone: "(16) 99149-5360",
       services: {
         corte: "arthur-argeri-gz0ern/corte-masculino",
         barba: "arthur-argeri-gz0ern/barba",
@@ -15,15 +16,16 @@ export const calConfig = {
       }
     },
     barbeiro2: {
-      nome: "Barbeiro 2", // ✅ ALTERE AQUI o nome do segundo barbeiro
-      username: "SEU-SEGUNDO-USERNAME", // ✅ ALTERE AQUI o username do segundo barbeiro
+      nome: "Marcos",
+      username: "arthur-argeri-gz0ern",
       especialidade: "Barbas e acabamentos",
-      foto: "👨‍🦱",
+      foto: "👨‍🦱", 
+      telefone: "(16) 99637-0028",
       services: {
-        corte: "SEU-SEGUNDO-USERNAME/corte-masculino",
-        barba: "SEU-SEGUNDO-USERNAME/barba",
-        corteBarba: "SEU-SEGUNDO-USERNAME/corte-barba",
-        sobrancelha: "SEU-SEGUNDO-USERNAME/sobrancelha",
+        corte: "arthur-argeri-gz0ern/corte-masculino",
+        barba: "arthur-argeri-gz0ern/barba",
+        corteBarba: "arthur-argeri-gz0ern/corte-barba",
+        sobrancelha: "arthur-argeri-gz0ern/sobrancelha",
       }
     }
   },

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CalEmbedSimple } from "./cal-embed-simple";
 import { calConfig } from "@/lib/cal-config";
-import { User, Star, Clock } from "lucide-react";
+import { User, Star, Clock, Phone } from "lucide-react";
 
 interface BarbeiroSelectorProps {
   service?: "corte" | "barba" | "corteBarba" | "sobrancelha";
@@ -99,6 +99,14 @@ export function BarbeiroSelector({ service, className = "" }: BarbeiroSelectorPr
                   <span className="text-sm">{barbeiro.avaliacoes} avaliações</span>
                 </div>
               </div>
+              
+              {/* Telefone do barbeiro */}
+              {barbeiro.telefone && (
+                <div className="flex items-center justify-center gap-1 mt-3 text-slate-400">
+                  <Phone className="h-4 w-4" />
+                  <span className="text-sm">{barbeiro.telefone}</span>
+                </div>
+              )}
             </CardHeader>
             
             <CardContent className="pt-0">
