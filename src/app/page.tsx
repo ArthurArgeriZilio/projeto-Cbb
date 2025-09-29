@@ -229,49 +229,54 @@ export default function HomePage() {
           </div>
         </motion.div>
 
-        {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-slate-800/30 rounded-2xl p-6 backdrop-blur-sm border border-slate-700"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-            <div>
-              <MapPin className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-              <h4 className="text-white font-semibold mb-1 text-sm">Localização</h4>
-              <p className="text-slate-300 text-xs">R. Genoveva Onófre Barban, 892<br />Planalto Verde - Ribeirão Preto, SP</p>
-            </div>
-            <div>
-              <Clock className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-              <h4 className="text-white font-semibold mb-1 text-sm">Horário</h4>
-              <p className="text-slate-300 text-xs">Seg - Sex: 9h às 19h<br />Sáb: 8h às 17h<br />Dom: Fechado</p>
-            </div>
-            <div>
-              <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-              <h4 className="text-white font-semibold mb-1 text-sm">Marcos</h4>
-              <p className="text-slate-300 text-xs">(16) 99637-0028</p>
-            </div>
-            <div>
-              <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-              <h4 className="text-white font-semibold mb-1 text-sm">Luiz</h4>
-              <p className="text-slate-300 text-xs">(16) 99149-5360</p>
-            </div>
-            <div>
-              <Instagram className="h-6 w-6 text-orange-500 mx-auto mb-2" />
-              <h4 className="text-white font-semibold mb-1 text-sm">Instagram</h4>
-              <a 
-                href="https://www.instagram.com/domluis_barbearia?igsh=dHR4Z2t2ZDBlM3Nn" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-300 text-xs hover:text-orange-500 transition-colors"
-              >
-                @domluis_barbearia
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </main>
+
+      {/* Footer with Contact Info */}
+      <footer className="bg-slate-900/50 border-t border-slate-800 py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="bg-slate-800/30 rounded-2xl p-6 backdrop-blur-sm border border-slate-700"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+              <div>
+                <MapPin className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+                <h4 className="text-white font-semibold mb-1 text-sm">Localização</h4>
+                <p className="text-slate-300 text-xs">R. Genoveva Onófre Barban, 892<br />Planalto Verde - Ribeirão Preto, SP</p>
+              </div>
+              <div>
+                <Clock className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+                <h4 className="text-white font-semibold mb-1 text-sm">Horário</h4>
+                <p className="text-slate-300 text-xs">Seg - Sex: 9h às 19h<br />Sáb: 8h às 17h<br />Dom: Fechado</p>
+              </div>
+              <div>
+                <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+                <h4 className="text-white font-semibold mb-1 text-sm">Marcos</h4>
+                <p className="text-slate-300 text-xs">(16) 99637-0028</p>
+              </div>
+              <div>
+                <User className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+                <h4 className="text-white font-semibold mb-1 text-sm">Luiz</h4>
+                <p className="text-slate-300 text-xs">(16) 99149-5360</p>
+              </div>
+              <div>
+                <Instagram className="h-6 w-6 text-orange-500 mx-auto mb-2" />
+                <h4 className="text-white font-semibold mb-1 text-sm">Instagram</h4>
+                <a 
+                  href="https://www.instagram.com/domluis_barbearia/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-300 text-xs hover:text-orange-500 transition-colors"
+                >
+                  @domluis_barbearia
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </footer>
     </div>
   );
 }
