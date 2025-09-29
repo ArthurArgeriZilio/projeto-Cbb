@@ -1,12 +1,33 @@
 {
-  "name": "cbb",
-  "version": "0.1.0",
+  "name": "dom-luis-barbearia",
+  "version": "1.2.0",
+  "description": "Website profissional da Dom Luis Barbearia - Ribeirão Preto/SP",
   "private": true,
+  "author": {
+    "name": "Arthur Argeri Zilio",
+    "url": "https://github.com/ArthurArgeriZilio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArthurArgeriZilio/projeto-Cbb.git"
+  },
+  "homepage": "https://arthurargerzilio.github.io/projeto-Cbb/",
+  "keywords": [
+    "barbearia",
+    "next.js",
+    "typescript",
+    "tailwind",
+    "ribeirão preto",
+    "agendamento online",
+    "cal.com"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "export": "next build && next export",
+    "deploy": "npm run export && gh-pages -d out",
     "setup-calendar": "node src/scripts/get-refresh-token.js",
     "test-calendar": "node src/scripts/test-calendar.js"
   },

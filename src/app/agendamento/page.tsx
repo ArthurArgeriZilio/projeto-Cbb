@@ -1,6 +1,6 @@
 "use client";
 
-import { CalEmbedSimple } from "@/components/booking/cal-embed-simple";
+import { BarbeiroSelector } from "@/components/booking/barbeiro-selector";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Phone, Star, Calendar } from "lucide-react";
@@ -131,20 +131,20 @@ function AgendamentoContent() {
               </Card>
             </div>
 
-            {/* Agendamento Cal.com */}
+            {/* Seleção de Barbeiro e Agendamento */}
             <div className="lg:col-span-2">
               <Card className="bg-slate-800/50 border-slate-700">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
                     <Calendar className="h-5 w-5 text-blue-500" />
-                    Agende seu Horário
+                    Escolha seu Barbeiro
                   </CardTitle>
                   <CardDescription className="text-slate-300">
-                    Escolha o melhor horário para seu atendimento
+                    Selecione o profissional e agende seu horário
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <CalEmbedSimple 
+                  <BarbeiroSelector 
                     service={service || undefined}
                     className="rounded-lg"
                   />

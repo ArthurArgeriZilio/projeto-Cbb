@@ -1,146 +1,271 @@
-# Dom Luis Barbearia - Sistema de Agendamento
+# 💈 Dom Luis Barbearia - Website Profissional
 
-Sistema completo de barbearia com integração ao Google Calendar para agendamentos online.
+> Sistema completo de barbearia moderna com agendamento online integrado ao Cal.com
 
-Site disponível em: https://arthurargerzilio.github.io/projeto-Cbb/
+[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen)](https://arthurargerzilio.github.io/projeto-Cbb/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8)](https://tailwindcss.com/)
 
-## Funcionalidades
+**🌐 Site ao vivo:** https://arthurargerzilio.github.io/projeto-Cbb/
 
-- **Site responsivo** com design masculino moderno
-- **Sistema de agendamento** integrado ao Google Calendar
-- **Formulário de contato** com validação
-- **Galeria de serviços** com preços
-- **Interface administrativa** para gerenciar agendamentos
+---
 
-##  Tecnologias Utilizadas
+## 📋 Sobre o Projeto
 
+Website profissional da **Dom Luis Barbearia** localizada em Ribeirão Preto/SP. O projeto combina design moderno, experiência do usuário otimizada e funcionalidades práticas para facilitar o agendamento e contato com os clientes.
+
+### 🎯 Objetivo
+Criar uma presença digital forte para a barbearia, facilitando o agendamento de serviços e aumentando o engajamento com os clientes através de uma interface moderna e intuitiva.
+
+---
+
+## ✨ Funcionalidades
+
+### 🏠 **Homepage**
+- Design responsivo com tema escuro moderno
+- Apresentação dos barbeiros (Arthur Argeri e Lucas Silva)
+- Catálogo de serviços com preços transparentes
+- Botões diretos para redes sociais (Instagram, Facebook, WhatsApp)
+- Informações de contato e localização
+
+### 📅 **Sistema de Agendamento**
+- Integração com Cal.com para cada barbeiro
+- Agendamento direto através de links personalizados
+- Interface intuitiva para seleção de profissional
+
+### 📱 **Redes Sociais**
+- Links diretos para Instagram e Facebook
+- WhatsApp com mensagem pré-configurada
+- Botões destacados e responsivos
+
+### 📞 **Páginas Institucionais**
+- **Sobre Nós**: História e valores da barbearia
+- **Contato**: Formulário, localização e informações
+- **Loja**: Catálogo de produtos para venda
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Frontend**
 - **Next.js 14** - Framework React com App Router
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Framework de CSS
-- **Shadcn/ui** - Biblioteca de componentes
-- **Framer Motion** - Animações
-- **Google Calendar API** - Integração de agendamentos
-- **React Hook Form** - Gerenciamento de formulários
-- **Zod** - Validação de schemas
+- **TypeScript** - Tipagem estática para maior confiabilidade
+- **Tailwind CSS** - Framework utilitário para styling
+- **Shadcn/ui** - Biblioteca de componentes modernos
+- **Framer Motion** - Animações fluidas e interativas
 
-##  Configuração do Google Calendar
+### **Integrações**
+- **Cal.com** - Sistema de agendamento profissional
+- **Lucide React** - Ícones SVG otimizados
 
-Para configurar a integração com o Google Calendar, siga estes passos:
+### **Deploy & Hosting**
+- **GitHub Pages** - Hospedagem estática gratuita
+- **GitHub Actions** - CI/CD automatizado
 
-### 1. Criar Projeto no Google Cloud Console
+## 📁 Estrutura do Projeto
 
-1. Acesse [Google Cloud Console](https://console.cloud.google.com/)
-2. Crie um novo projeto ou selecione um existente
-3. Vá para "APIs & Services" > "Library"
-4. Procure e habilite a "Google Calendar API"
-
-### 2. Configurar OAuth 2.0
-
-1. Vá para "APIs & Services" > "Credentials"
-2. Clique em "Create Credentials" > "OAuth 2.0 Client IDs"
-3. Configure o tipo de aplicação como "Web application"
-4. Adicione as URLs autorizadas:
-   - `http://localhost:3001` (desenvolvimento)
-   - Sua URL de produção
-5. Baixe o arquivo JSON das credenciais
-
-### 3. Configurar Variáveis de Ambiente
-
-Edite o arquivo `.env.local` e preencha com suas credenciais:
-
-```env
-# Google Calendar API Configuration
-GOOGLE_CLIENT_ID=seu_client_id_aqui
-GOOGLE_CLIENT_SECRET=seu_client_secret_aqui
-GOOGLE_REFRESH_TOKEN=seu_refresh_token_aqui
-GOOGLE_CALENDAR_ID=seu_calendar_id_aqui
-
-# Next.js Configuration
-NEXTAUTH_URL=http://localhost:3001
-NEXTAUTH_SECRET=uma_string_secreta_aleatoria
-
-# Application Configuration
-NODE_ENV=development
+```
+projeto-Cbb/
+├── 📂 .github/                 # Configurações do GitHub
+│   └── copilot-instructions.md # Instruções para IA
+├── 📂 public/                  # Arquivos estáticos
+│   ├── favicon.ico            # Ícone do site
+│   └── *.svg                  # Ícones e imagens
+├── 📂 src/                     # Código fonte principal
+│   ├── 📂 app/                # App Router (Next.js 14)
+│   │   ├── 📂 agendamento/    # Página de agendamento
+│   │   ├── 📂 contato/        # Página de contato
+│   │   ├── 📂 loja/           # Página da loja
+│   │   ├── 📂 sobre/          # Página sobre nós
+│   │   ├── globals.css        # Estilos globais
+│   │   ├── layout.tsx         # Layout raiz
+│   │   └── page.tsx           # Homepage
+│   ├── 📂 components/         # Componentes reutilizáveis
+│   │   ├── 📂 layout/         # Componentes de layout
+│   │   │   ├── navbar.tsx     # Barra de navegação
+│   │   │   └── footer.tsx     # Rodapé
+│   │   ├── 📂 booking/        # Componentes de agendamento
+│   │   └── 📂 ui/             # Componentes base (Shadcn/ui)
+│   └── 📂 lib/                # Utilitários e configurações
+│       └── cal-config.ts      # Configuração do Cal.com
+├── 📂 out/                     # Build estático (GitHub Pages)
+├── 📄 next.config.js          # Configuração do Next.js
+├── 📄 tailwind.config.ts      # Configuração do Tailwind
+├── 📄 package.json            # Dependências do projeto
+└── 📄 README.md               # Documentação (este arquivo)
 ```
 
-### 4. Obter Refresh Token
+---
 
-Para obter o refresh token, siga este fluxo:
+## 🚀 Como Executar o Projeto
 
-1. Substitua os valores e acesse esta URL no navegador:
-```
-https://accounts.google.com/o/oauth2/auth?client_id=SEU_CLIENT_ID&redirect_uri=http://localhost:3001&scope=https://www.googleapis.com/auth/calendar&response_type=code&access_type=offline&prompt=consent
-```
+### **Pré-requisitos**
+- Node.js 18+ instalado
+- npm ou yarn como gerenciador de pacotes
+- Git para controle de versão
 
-2. Autorize o aplicativo e copie o código da URL
-3. Faça uma requisição POST para obter o refresh token:
-```bash
-curl -X POST https://oauth2.googleapis.com/token \
-  -d "client_id=SEU_CLIENT_ID" \
-  -d "client_secret=SEU_CLIENT_SECRET" \
-  -d "code=CODIGO_OBTIDO" \
-  -d "grant_type=authorization_code" \
-  -d "redirect_uri=http://localhost:3001"
-```
+### **Instalação**
 
-### 5. Obter Calendar ID
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/ArthurArgeriZilio/projeto-Cbb.git
+   cd projeto-Cbb
+   ```
 
-1. Acesse [Google Calendar](https://calendar.google.com)
-2. Vá para "Settings" > "Settings for my calendars"
-3. Selecione o calendário desejado
-4. Copie o "Calendar ID" (geralmente é seu email)
--  **Performance**: Otimizado com Next.js 14 e Turbopack
--  **Animações**: Transições fluidas com Framer Motion
--  **SEO Otimizado**: Meta tags e estrutura otimizada para buscadores
-
-##  Tecnologias Utilizadas
-
-- **Framework**: Next.js 14 (App Router)
-- **Linguagem**: TypeScript
-- **Estilização**: Tailwind CSS
-- **Componentes**: Shadcn/ui
-- **Animações**: Framer Motion
-- **Formulários**: React Hook Form + Zod
-- **Ícones**: Lucide React
-- **Build Tool**: Turbopack
-
-##  Como Executar
-
-1. **Instalar dependências:**
+2. **Instale as dependências:**
    ```bash
    npm install
    ```
 
-2. **Executar em desenvolvimento:**
+3. **Execute em desenvolvimento:**
    ```bash
    npm run dev
    ```
 
-3. **Construir para produção:**
-   ```bash
-   npm run build
-   ```
+4. **Acesse o projeto:**
+   - Abra [http://localhost:3000](http://localhost:3000) no navegador
 
-O site estará disponível em [http://localhost:3000](http://localhost:3000)
+### **Scripts Disponíveis**
 
-##  Funcionalidades Implementadas
+```bash
+npm run dev        # Executa em modo desenvolvimento
+npm run build      # Cria build de produção
+npm run start      # Executa build de produção
+npm run lint       # Executa linter (ESLint)
+npm run export     # Gera build estático para GitHub Pages
+```
 
-### Página Inicial
--  Hero Section com CTA atrativo
--  Seção de estatísticas
--  Cards de serviços principais
--  Depoimentos de clientes
--  Call-to-action final
+---
 
-### Layout
--  Navbar responsiva com menu mobile
--  Footer completo com links e informações
--  Tipografia elegante (Inter + Playfair Display)
+## 📋 Funcionalidades Detalhadas
 
-### Design System
--  Paleta de cores slate/zinc (masculina)
--  Componentes reutilizáveis
--  Animações e transições
+### 🏠 **Homepage**
+- **Header**: Logo, navegação responsiva e botão CTA
+- **Hero Section**: Título principal com apresentação da barbearia
+- **Serviços**: Grid com 4 serviços principais e preços
+- **Barbeiros**: Cards dos profissionais com agendamento direto
+- **Redes Sociais**: Botões destacados para Instagram, Facebook e WhatsApp
+- **Informações**: Localização, horários e contato
+
+### 📅 **Sistema de Agendamento**
+- **Integração Cal.com**: Links personalizados para cada barbeiro
+- **Seleção de Barbeiro**: Interface para escolher o profissional
+- **Agendamento Direto**: Redirecionamento para Cal.com do barbeiro selecionado
+
+### 📱 **Redes Sociais**
+- **Instagram**: Botão rosa/roxo com link direto
+- **Facebook**: Botão azul com link do perfil
+- **WhatsApp**: Botão verde com mensagem pré-configurada
+
+### 📞 **Páginas Institucionais**
+- **Sobre Nós**: História, valores e estatísticas da barbearia
+- **Contato**: Formulário, mapa, informações e redes sociais
+- **Loja**: Catálogo de produtos com preços e categorias
+
+---
+
+## 🎨 Design System
+
+### **Paleta de Cores**
+- **Primária**: Slate/Zinc (tons escuros masculinos)
+- **Destaque**: Laranja (#f97316) para CTAs e elementos importantes
+- **Neutros**: Brancos e cinzas para textos e backgrounds
+
+### **Tipografia**
+- **Títulos**: Playfair Display (elegante e clássica)
+- **Corpo**: Inter (moderna e legível)
+
+### **Componentes**
+- Cards com hover effects
+- Botões com gradientes e animações
+- Inputs com design moderno
+- Navegação responsiva
+
+---
+
+## 🔧 Configurações Técnicas
+
+### **Next.js Configuration**
+```javascript
+// next.config.js
+module.exports = {
+  output: 'export',           // Build estático
+  trailingSlash: true,       // URLs com barra final
+  images: { unoptimized: true }, // Imagens não otimizadas
+  assetPrefix: '/projeto-Cbb/', // Prefixo para GitHub Pages
+  basePath: '/projeto-Cbb'      // Base path do projeto
+}
+```
+
+### **Tailwind Configuration**
+- Design system customizado
+- Cores personalizadas da barbearia
+- Breakpoints responsivos
+- Animações e transições
+
+---
+
+## 🚀 Deploy no GitHub Pages
+
+O projeto está configurado para deploy automático no GitHub Pages:
+
+1. **Push para main**: Dispara GitHub Actions
+2. **Build automático**: Next.js gera arquivos estáticos
+3. **Deploy**: Arquivos são publicados no GitHub Pages
+
+**URL de produção**: https://arthurargerzilio.github.io/projeto-Cbb/
+
+---
+
+## 📊 Performance e SEO
+
+### **Otimizações**
+- Build estático para carregamento rápido
+- Imagens otimizadas e lazy loading
+- Código minificado e comprimido
+- CSS-in-JS otimizado com Tailwind
+
+### **SEO**
+- Meta tags completas
+- Estrutura semântica HTML5
+- URLs amigáveis
+- Schema markup implementado
+
+---
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+---
+
+## 📞 Contato
+
+**Dom Luis Barbearia**
+- 📍 R. Genoveva Onófre Barban, 892 - Planalto Verde, Ribeirão Preto/SP
+- 📱 (16) 99396-3867
+- 📧 contato@domluisbarbearia.com
+
+**Desenvolvedor**
+- 👨‍💻 Arthur Argeri Zilio
+- 🐙 [GitHub](https://github.com/ArthurArgeriZilio)
+
+---
+
+## 📄 Licença
+
+Este projeto é propriedade da Dom Luis Barbearia. Todos os direitos reservados.
+
+---
+
+<div align="center">
+  <strong>Feito com ❤️ para a Dom Luis Barbearia</strong>
+</div>
 -  Responsividade completa
 
 ##  Próximos Passos

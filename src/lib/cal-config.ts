@@ -1,7 +1,32 @@
 // Configurações do Cal.com para Dom Luis Barbearia
 export const calConfig = {
-  // Substitua pelo seu username do Cal.com
-  username: "arthur-argeri-gz0ern", // ✅ CONFIGURADO!
+  // Configurações dos barbeiros
+  barbeiros: {
+    barbeiro1: {
+      nome: "Dom Luis",
+      username: "arthur-argeri-gz0ern", // ✅ CONFIGURADO!
+      especialidade: "Cortes clássicos e modernos",
+      foto: "👨‍🦲",
+      services: {
+        corte: "arthur-argeri-gz0ern/corte-masculino",
+        barba: "arthur-argeri-gz0ern/barba",
+        corteBarba: "arthur-argeri-gz0ern/corte-barba",
+        sobrancelha: "arthur-argeri-gz0ern/sobrancelha",
+      }
+    },
+    barbeiro2: {
+      nome: "Barbeiro 2", // ✅ ALTERE AQUI o nome do segundo barbeiro
+      username: "SEU-SEGUNDO-USERNAME", // ✅ ALTERE AQUI o username do segundo barbeiro
+      especialidade: "Barbas e acabamentos",
+      foto: "👨‍🦱",
+      services: {
+        corte: "SEU-SEGUNDO-USERNAME/corte-masculino",
+        barba: "SEU-SEGUNDO-USERNAME/barba",
+        corteBarba: "SEU-SEGUNDO-USERNAME/corte-barba",
+        sobrancelha: "SEU-SEGUNDO-USERNAME/sobrancelha",
+      }
+    }
+  },
   
   // Configurações do embed
   embedConfig: {
@@ -20,12 +45,13 @@ export const calConfig = {
     locale: "pt-BR",
   },
   
-  // Links diretos para serviços específicos (opcional)
+  // Mantém compatibilidade com versão anterior
+  username: "arthur-argeri-gz0ern", // ✅ CONFIGURADO!
   services: {
-    corte: "arthur-argeri-gz0ern/corte-masculino",      // ✅ CONFIGURADO!
-    barba: "arthur-argeri-gz0ern/barba",                // ✅ CONFIGURADO!  
-    corteBarba: "arthur-argeri-gz0ern/corte-barba",     // ✅ CONFIGURADO!
-    sobrancelha: "arthur-argeri-gz0ern/sobrancelha",    // ✅ CONFIGURADO!
+    corte: "arthur-argeri-gz0ern/corte-masculino",
+    barba: "arthur-argeri-gz0ern/barba",
+    corteBarba: "arthur-argeri-gz0ern/corte-barba",
+    sobrancelha: "arthur-argeri-gz0ern/sobrancelha",
   }
 };
 

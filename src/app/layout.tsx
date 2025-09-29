@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Dom Luis Barbearia - Tradição e Estilo Masculino",
-  description: "A melhor barbearia da cidade. Cortes modernos, barbas impecáveis e tratamentos especiais para o homem moderno. Agende online!",
+  description: "A melhor barbearia de Ribeirão Preto. Cortes modernos, barbas impecáveis e tratamentos especiais para o homem moderno. Agende online!",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} antialiased min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-100`}>
+      <body className={`${inter.className} antialiased min-h-screen`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow">
