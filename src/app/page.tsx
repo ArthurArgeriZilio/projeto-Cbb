@@ -11,7 +11,11 @@ import {
   Phone,
   Instagram,
   Facebook,
-  MessageCircle
+  MessageCircle,
+  Scissors,
+  Zap,
+  User,
+  Eye
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,18 +23,18 @@ export default function HomePage() {
   // Dados dos barbeiros
   const barbers = [
     {
-      name: "Arthur Argeri",
-      avatar: "A",
-      calUrl: "https://cal.com/arthurargeri/barbearia",
+      name: "Luis",
+      avatar: "L",
+      calUrl: "https://cal.com/luis/barbearia",
       specialty: "Cortes Modernos",
       rating: 5.0,
       experience: "8 anos",
       price: "R$ 35"
     },
     {
-      name: "Lucas Silva",
-      avatar: "L",
-      calUrl: "https://cal.com/lucassilva/barbearia",
+      name: "Marcos",
+      avatar: "M",
+      calUrl: "https://cal.com/marcos/barbearia",
       specialty: "Barba & Desenho",
       rating: 5.0,
       experience: "6 anos",
@@ -70,28 +74,36 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mb-8">
             <Card className="bg-slate-800/50 border-slate-700 text-center">
               <CardContent className="p-4">
-                <div className="text-3xl mb-2">✂️</div>
+                <div className="flex justify-center mb-2">
+                  <Scissors className="w-8 h-8 text-orange-500" />
+                </div>
                 <h3 className="text-white text-sm font-semibold mb-1">Corte Masculino</h3>
                 <p className="text-lg font-bold text-orange-500">R$ 35</p>
               </CardContent>
             </Card>
             <Card className="bg-slate-800/50 border-slate-700 text-center">
               <CardContent className="p-4">
-                <div className="text-3xl mb-2">🧔</div>
+                <div className="flex justify-center mb-2">
+                  <User className="w-8 h-8 text-orange-500" />
+                </div>
                 <h3 className="text-white text-sm font-semibold mb-1">Barba</h3>
                 <p className="text-lg font-bold text-orange-500">R$ 30</p>
               </CardContent>
             </Card>
             <Card className="bg-slate-800/50 border-slate-700 text-center">
               <CardContent className="p-4">
-                <div className="text-3xl mb-2">💪</div>
+                <div className="flex justify-center mb-2">
+                  <Zap className="w-8 h-8 text-orange-500" />
+                </div>
                 <h3 className="text-white text-sm font-semibold mb-1">Corte + Barba</h3>
                 <p className="text-lg font-bold text-orange-500">R$ 60</p>
               </CardContent>
             </Card>
             <Card className="bg-slate-800/50 border-slate-700 text-center">
               <CardContent className="p-4">
-                <div className="text-3xl mb-2">👁️</div>
+                <div className="flex justify-center mb-2">
+                  <Eye className="w-8 h-8 text-orange-500" />
+                </div>
                 <h3 className="text-white text-sm font-semibold mb-1">Sobrancelha</h3>
                 <p className="text-lg font-bold text-orange-500">R$ 15</p>
               </CardContent>

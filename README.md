@@ -208,13 +208,32 @@ module.exports = {
 
 ## 🚀 Deploy no GitHub Pages
 
-O projeto está configurado para deploy automático no GitHub Pages:
+### **Deploy Automático**
+O projeto está configurado para deploy automático:
 
-1. **Push para main**: Dispara GitHub Actions
-2. **Build automático**: Next.js gera arquivos estáticos
+1. **Push para master**: Dispara GitHub Actions automaticamente
+2. **Build**: Next.js gera arquivos estáticos com configuração otimizada
 3. **Deploy**: Arquivos são publicados no GitHub Pages
+4. **URL**: https://arthurargerzilio.github.io/projeto-Cbb/
 
-**URL de produção**: https://arthurargerzilio.github.io/projeto-Cbb/
+### **Deploy Manual**
+Para fazer deploy manual (Windows):
+```bash
+# Execute o script de deploy
+deploy.bat
+```
+
+Para Linux/Mac:
+```bash
+# Dar permissão e executar
+chmod +x deploy.sh
+./deploy.sh
+```
+
+### **Verificação do Deploy**
+- ✅ Build bem-sucedido: Arquivos na pasta `out/`
+- ✅ GitHub Actions: Verifique na aba "Actions" do repositório
+- ✅ Site ativo: https://arthurargerzilio.github.io/projeto-Cbb/
 
 ---
 
