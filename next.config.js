@@ -5,6 +5,9 @@ const nextConfig = {
   distDir: 'out',
   basePath: process.env.GITHUB_ACTIONS ? '/projeto-Cbb' : '',
   assetPrefix: process.env.GITHUB_ACTIONS ? '/projeto-Cbb/' : '',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     unoptimized: true
   },

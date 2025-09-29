@@ -1,7 +1,6 @@
 "use client";
 
-import       if (calRef.current && (window as unknown).Cal) {
-        (window as unknown).Cal("init", {useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { calConfig } from "@/lib/cal-config";
 import { Calendar, Clock, Loader2 } from "lucide-react";
 
@@ -23,12 +22,13 @@ export function CalEmbed({ calLink, service, className = "" }: CalEmbedProps) {
     // Função para carregar o Cal.com
     const loadCal = () => {
       try {
-        if (calRef.current && (window as any).Cal) {
-          (window as any).Cal("init", {
+        if (calRef.current && (window as unknown as { Cal: unknown }).Cal) {
+          const Cal = (window as unknown as { Cal: (action: string, options: Record<string, unknown>) => void }).Cal;
+          Cal("init", {
             origin: "https://app.cal.com",
           });
 
-          (window as any).Cal("inline", {
+          Cal("inline", {
             elementOrSelector: calRef.current,
             calLink: finalCalLink,
             layout: "month_view",
@@ -49,7 +49,7 @@ export function CalEmbed({ calLink, service, className = "" }: CalEmbedProps) {
     };
 
     // Carrega o script do Cal.com se não estiver carregado
-    if (!(window as any).Cal) {
+    if (!(window as unknown as { Cal: unknown }).Cal) {
       const script = document.createElement("script");
       script.src = "https://app.cal.com/embed/embed.js";
       script.async = true;

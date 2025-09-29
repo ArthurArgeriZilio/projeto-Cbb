@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Scissors, MapPin, Phone, Mail, Instagram, Facebook, Youtube, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 

@@ -2,12 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { 
   Calendar, 
   Star, 
-  Scissors, 
   Clock,
   MapPin,
   Phone,
@@ -16,7 +14,6 @@ import {
   MessageCircle
 } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function HomePage() {
   // Dados dos barbeiros

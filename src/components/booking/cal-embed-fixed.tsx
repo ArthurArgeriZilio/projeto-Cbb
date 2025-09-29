@@ -23,8 +23,8 @@ export function CalEmbed({ calLink, service, className = "" }: CalEmbedProps) {
     // Função para carregar o Cal.com
     const loadCal = () => {
       try {
-        if (currentCalRef && (window as { Cal?: unknown }).Cal) {
-          const Cal = (window as { Cal: (action: string, config: unknown) => void }).Cal;
+        if (currentCalRef && (window as unknown as { Cal?: unknown }).Cal) {
+          const Cal = (window as unknown as { Cal: (action: string, config: unknown) => void }).Cal;
           
           Cal("init", {
             origin: "https://app.cal.com",
@@ -51,7 +51,7 @@ export function CalEmbed({ calLink, service, className = "" }: CalEmbedProps) {
     };
 
     // Carrega o script do Cal.com se não estiver carregado
-    if (!(window as { Cal?: unknown }).Cal) {
+    if (!(window as unknown as { Cal?: unknown }).Cal) {
       const script = document.createElement("script");
       script.src = "https://app.cal.com/embed/embed.js";
       script.async = true;
