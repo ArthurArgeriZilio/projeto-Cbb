@@ -44,6 +44,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 pt-20">
+
+
       {/* Main Content */}
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
@@ -51,7 +53,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Dom Luis Barbearia - ATUALIZADO 2024
@@ -65,36 +67,47 @@ export default function HomePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-10"
         >
-          <h2 className="text-2xl font-bold text-white text-center mb-8">Nossos Serviços</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="bg-slate-800/30 p-4 rounded-lg text-center">
-              <Scissors className="h-8 w-8 text-orange-500 mx-auto mb-2" />
-              <h3 className="text-white font-semibold text-sm">Corte Masculino</h3>
-              <p className="text-orange-500 font-bold">R$ 35</p>
-            </div>
-            <div className="bg-slate-800/30 p-4 rounded-lg text-center">
-              <User className="h-8 w-8 text-orange-500 mx-auto mb-2" />
-              <h3 className="text-white font-semibold text-sm">Barba</h3>
-              <p className="text-orange-500 font-bold">R$ 30</p>
-            </div>
-            <div className="bg-slate-800/30 p-4 rounded-lg text-center">
-              <Zap className="h-8 w-8 text-orange-500 mx-auto mb-2" />
-              <h3 className="text-white font-semibold text-sm">Corte + Barba</h3>
-              <p className="text-orange-500 font-bold">R$ 60</p>
-            </div>
-            <div className="bg-slate-800/30 p-4 rounded-lg text-center">
-              <Eye className="h-8 w-8 text-orange-500 mx-auto mb-2" />
-              <h3 className="text-white font-semibold text-sm">Sobrancelha</h3>
-              <p className="text-orange-500 font-bold">R$ 15</p>
-            </div>
-            <div className="bg-slate-800/30 p-4 rounded-lg text-center">
-              <Star className="h-8 w-8 text-orange-500 mx-auto mb-2" />
-              <h3 className="text-white font-semibold text-sm">Luzes</h3>
-              <p className="text-orange-500 font-bold">R$ 80</p>
-            </div>
+          <h2 className="text-2xl font-bold text-white text-center mb-6">Nossos Serviços</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mb-8">
+            <Card className="bg-slate-800/50 border-slate-700 text-center">
+              <CardContent className="p-4">
+                <div className="flex justify-center mb-2">
+                  <Scissors className="w-8 h-8 text-orange-500" />
+                </div>
+                <h3 className="text-white text-sm font-semibold mb-1">Corte Masculino</h3>
+                <p className="text-lg font-bold text-orange-500">R$ 35</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-slate-700 text-center">
+              <CardContent className="p-4">
+                <div className="flex justify-center mb-2">
+                  <User className="w-8 h-8 text-orange-500" />
+                </div>
+                <h3 className="text-white text-sm font-semibold mb-1">Barba</h3>
+                <p className="text-lg font-bold text-orange-500">R$ 30</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-slate-700 text-center">
+              <CardContent className="p-4">
+                <div className="flex justify-center mb-2">
+                  <Zap className="w-8 h-8 text-orange-500" />
+                </div>
+                <h3 className="text-white text-sm font-semibold mb-1">Corte + Barba</h3>
+                <p className="text-lg font-bold text-orange-500">R$ 60</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800/50 border-slate-700 text-center">
+              <CardContent className="p-4">
+                <div className="flex justify-center mb-2">
+                  <Eye className="w-8 h-8 text-orange-500" />
+                </div>
+                <h3 className="text-white text-sm font-semibold mb-1">Sobrancelha</h3>
+                <p className="text-lg font-bold text-orange-500">R$ 15</p>
+              </CardContent>
+            </Card>
           </div>
         </motion.div>
 
@@ -102,47 +115,55 @@ export default function HomePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mb-6 md:mb-8 px-4"
         >
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
-            Agende direto com o profissional de sua preferência
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {barbers.map((barber, index) => (
-              <Card key={index} className="bg-slate-800/30 border-slate-700 overflow-hidden">
-                <CardContent className="p-6">
+          <h2 className="text-2xl font-bold text-white mb-3">Escolha seu Barbeiro</h2>
+          <p className="text-slate-300 text-sm">Agende direto com o profissional de sua preferência</p>
+        </motion.div>
+
+        {/* Barbers Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto px-4 md:px-0">
+          {barbers.map((barber, index) => (
+            <motion.div
+              key={barber.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            >
+              <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 hover:border-orange-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10">
+                <CardContent className="p-4 md:p-6">
                   <div className="flex flex-col items-center text-center">
                     {/* Avatar */}
                     <div className="relative mb-4">
-                      <Avatar className="h-20 w-20 bg-gradient-to-br from-orange-500 to-orange-600">
-                        <AvatarFallback className="text-white text-2xl font-bold bg-transparent">
+                      <Avatar className="h-20 w-20 border-4 border-orange-500">
+                        <AvatarFallback className="bg-gradient-to-br from-orange-500 to-orange-600 text-white text-xl font-bold">
                           {barber.avatar}
                         </AvatarFallback>
                       </Avatar>
-                      <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-slate-800"></div>
+                      <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-1">
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </div>
                     </div>
 
-                    {/* Name & Specialty */}
+                    {/* Barber Info */}
                     <h3 className="text-xl font-bold text-white mb-2">{barber.name}</h3>
-                    <p className="text-orange-500 font-medium mb-2">{barber.specialty}</p>
-
-                    {/* Rating & Experience */}
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                        <span className="text-white font-semibold">{barber.rating}</span>
+                    <p className="text-orange-400 font-medium mb-3 text-sm">{barber.specialty}</p>
+                    
+                    {/* Stats */}
+                    <div className="flex items-center justify-center space-x-4 mb-3 text-xs text-slate-300">
+                      <div className="flex items-center">
+                        <Star className="h-3 w-3 text-yellow-500 mr-1" fill="currentColor" />
+                        <span>{barber.rating}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4 text-slate-400" />
-                        <span className="text-slate-300 text-sm">{barber.experience}</span>
+                      <div className="flex items-center">
+                        <Clock className="h-3 w-3 text-slate-400 mr-1" />
+                        <span>{barber.experience}</span>
                       </div>
                     </div>
-
+                    
                     {/* Price */}
-                    <div className="text-center mb-6">
-                      <p className="text-3xl font-bold text-orange-500 mb-1">{barber.price}</p>
-                    </div>
+                    <div className="text-xl font-bold text-orange-500 mb-4">{barber.price}</div>
 
                     {/* Action Button */}
                     <Link href="/agendamento" className="w-full">
@@ -154,18 +175,18 @@ export default function HomePage() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Social Media Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-16"
+          className="mt-10 mb-8"
         >
-          <h2 className="text-2xl font-bold text-white text-center mb-8">Nos Siga nas Redes</h2>
+          <h2 className="text-2xl font-bold text-white text-center mb-6">Nos Siga nas Redes</h2>
           <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
             <a
               href="https://www.instagram.com/domluis_barbearia?igsh=dHR4Z2t2ZDBlM3Nn"
@@ -173,7 +194,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-semibold py-3 px-6 transition-all duration-300 transform hover:scale-105">
+              <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-4 text-base transition-all duration-300 transform hover:scale-105">
                 <Instagram className="h-5 w-5 mr-2" />
                 Instagram
               </Button>
@@ -184,18 +205,18 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 transition-all duration-300 transform hover:scale-105">
+              <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-4 text-base transition-all duration-300 transform hover:scale-105">
                 <Facebook className="h-5 w-5 mr-2" />
                 Facebook
               </Button>
             </a>
             <a
-              href="https://wa.me/5516993963867"
+              href="https://wa.me/5516993963867?text=Olá! Gostaria de agendar um horário na Dom Luis Barbearia"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 px-6 transition-all duration-300 transform hover:scale-105">
+              <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-4 text-base transition-all duration-300 transform hover:scale-105">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 WhatsApp
               </Button>
@@ -205,7 +226,7 @@ export default function HomePage() {
 
       </main>
 
-      {/* Footer with Complete Information - APENAS UM FOOTER */}
+      {/* Footer with Complete Information */}
       <footer className="bg-slate-900/50 border-t border-slate-800 py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
