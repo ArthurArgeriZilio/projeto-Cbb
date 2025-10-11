@@ -30,7 +30,8 @@ export default function HomePage() {
       specialty: "Cortes Modernos",
       rating: 5.0,
       experience: "8 anos",
-      price: "R$ 35"
+      price: "R$ 35",
+      calLink: "/agendamento?barbeiro=luiz"
     },
     {
       name: "Marcos",
@@ -38,7 +39,8 @@ export default function HomePage() {
       specialty: "Barba & Desenho",
       rating: 5.0,
       experience: "6 anos",
-      price: "R$ 30"
+      price: "R$ 30",
+      calLink: "/agendamento?barbeiro=marcos"
     },
   ];
 
@@ -145,7 +147,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Action Button */}
-                    <Link href="/agendamento" className="w-full">
+                    <Link href={barber.calLink} className="w-full">
                       <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-4 sm:py-3 px-4 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
                         <Calendar className="h-6 w-6 sm:h-5 sm:w-5 mr-2" />
                         Agendar com {barber.name}

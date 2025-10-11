@@ -5,11 +5,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Phone, Star, Calendar } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 function AgendamentoContent() {
   const searchParams = useSearchParams();
   const service = searchParams.get('service') as "corte" | "barba" | "corteBarba" | "sobrancelha" | null;
+  const barbeiroParam = searchParams.get('barbeiro') as "luiz" | "marcos" | null;
+  const [selectedBarbeiro, setSelectedBarbeiro] = useState<string | null>(barbeiroParam);
+
+  // Se vier com parâmetro de barbeiro, já seleciona
+  useEffect(() => {
+    if (barbeiroParam) {
+      setSelectedBarbeiro(barbeiroParam);
+    }
+  }, [barbeiroParam]);
 
   const getServiceTitle = () => {
     switch (service) {
@@ -149,6 +158,7 @@ function AgendamentoContent() {
                 <CardContent>
                   <BarbeiroSelector 
                     service={service || undefined}
+                    initialBarbeiro={selectedBarbeiro || undefined}
                     className="rounded-lg"
                   />
                 </CardContent>

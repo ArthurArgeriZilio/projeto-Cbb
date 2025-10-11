@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -10,11 +10,20 @@ import { User, Star, Clock, Phone } from "lucide-react";
 
 interface BarbeiroSelectorProps {
   service?: "corte" | "barba" | "corteBarba" | "sobrancelha";
+  initialBarbeiro?: string;
   className?: string;
 }
 
-export function BarbeiroSelector({ service, className = "" }: BarbeiroSelectorProps) {
+export function BarbeiroSelector({ service, initialBarbeiro, className = "" }: BarbeiroSelectorProps) {
   const [barbeiroSelecionado, setBarbeiroSelecionado] = useState<"barbeiro1" | "barbeiro2" | null>(null);
+
+  // Se vier com barbeiro inicial, já seleciona
+  useEffect(() => {
+    if (initialBarbeiro) {
+      const barbeiroId = initialBarbeiro.toLowerCase() === "luiz" ? "barbeiro1" : "barbeiro2";
+      setBarbeiroSelecionado(barbeiroId);
+    }
+  }, [initialBarbeiro]);
 
   const barbeiros = [
     {
