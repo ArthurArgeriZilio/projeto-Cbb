@@ -54,10 +54,10 @@ export default function HomePage() {
           className="text-center mb-16"
         >
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dom Luis Barbearia - ATUALIZADO 2024
+            Dom Luis Barbearia
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Profissionais experientes prontos para cuidar do seu visual - Versão Mais Recente
+            Profissionais experientes prontos para cuidar do seu visual
           </p>
         </motion.div>
 
