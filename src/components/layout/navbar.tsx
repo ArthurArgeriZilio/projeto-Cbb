@@ -22,17 +22,17 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 bg-slate-800/90 backdrop-blur-md border-b border-slate-700 shadow-sm"
+      className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-blue-900/50 shadow-sm"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
-              <Scissors className="h-8 w-8 text-orange-500 group-hover:text-orange-400 transition-colors duration-300" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <Scissors className="h-8 w-8 text-blue-500 group-hover:text-blue-400 transition-colors duration-300" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
             </div>
-            <span className="text-2xl font-playfair font-bold text-white">
+            <span className="text-2xl font-playfair font-bold text-amber-50">
               Dom Luis Barbearia
             </span>
           </Link>
@@ -43,10 +43,10 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-slate-300 hover:text-orange-500 font-medium transition-colors duration-300 relative group"
+                className="text-amber-100/80 hover:text-blue-400 font-medium transition-colors duration-300 relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -54,7 +54,7 @@ export function Navbar() {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/agendamento">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-amber-50 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <Calendar className="h-4 w-4 mr-2" />
                 Agendar
               </Button>
@@ -81,16 +81,28 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="pt-4 border-t border-gray-200">
-                  <Button className="w-full bg-gradient-to-r from-slate-700 to-zinc-800 hover:from-slate-800 hover:to-zinc-900 text-white mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    Agendar Horário
-                  </Button>
-                  <div className="flex space-x-2">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <ShoppingCart className="h-4 w-4 mr-2" />
-                      Carrinho
+                  <Link href="/agendamento" onClick={() => setIsOpen(false)}>
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-amber-50 mb-3">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      Agendar Horário
                     </Button>
-                    <Button variant="outline" size="sm" className="flex-1">
+                  </Link>
+                  <div className="flex space-x-2">
+                    <Link href="/loja" onClick={() => setIsOpen(false)} className="flex-1">
+                      <Button variant="outline" size="sm" className="w-full">
+                        <ShoppingCart className="h-4 w-4 mr-2" />
+                        Carrinho
+                      </Button>
+                    </Link>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => {
+                        setIsOpen(false);
+                        alert('Funcionalidade de login em desenvolvimento! 👨‍💼');
+                      }}
+                    >
                       <User className="h-4 w-4 mr-2" />
                       Entrar
                     </Button>

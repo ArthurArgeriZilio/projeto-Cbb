@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Star, Package } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function LojaPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const products = [
     {
       id: 1,
@@ -89,25 +91,43 @@ export default function LojaPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center gap-4 mb-12"
+          className="flex justify-center gap-4 mb-12 flex-wrap px-4"
         >
-          <Badge variant="secondary" className="bg-orange-500/20 text-orange-300 border-orange-500/30">
+          <Badge 
+            variant="secondary" 
+            className={`cursor-pointer transition-all ${selectedCategory === null ? 'bg-orange-500/20 text-orange-300 border-orange-500/30' : 'bg-slate-700 text-slate-300'}`}
+            onClick={() => setSelectedCategory(null)}
+          >
             Todos
           </Badge>
-          <Badge variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700">
+          <Badge 
+            variant="outline" 
+            className={`cursor-pointer transition-all ${selectedCategory === 'Cabelo' ? 'bg-orange-500/20 text-orange-300 border-orange-500/30' : 'border-slate-600 text-slate-300 hover:bg-slate-700'}`}
+            onClick={() => setSelectedCategory('Cabelo')}
+          >
             Cabelo
           </Badge>
-          <Badge variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700">
+          <Badge 
+            variant="outline" 
+            className={`cursor-pointer transition-all ${selectedCategory === 'Barba' ? 'bg-orange-500/20 text-orange-300 border-orange-500/30' : 'border-slate-600 text-slate-300 hover:bg-slate-700'}`}
+            onClick={() => setSelectedCategory('Barba')}
+          >
             Barba
           </Badge>
-          <Badge variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700">
+          <Badge 
+            variant="outline" 
+            className={`cursor-pointer transition-all ${selectedCategory === 'Kit' ? 'bg-orange-500/20 text-orange-300 border-orange-500/30' : 'border-slate-600 text-slate-300 hover:bg-slate-700'}`}
+            onClick={() => setSelectedCategory('Kit')}
+          >
             Kits
           </Badge>
         </motion.div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {products.map((product, index) => (
+          {products
+            .filter(product => selectedCategory === null || product.category === selectedCategory)
+            .map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 20 }}
@@ -144,7 +164,10 @@ export default function LojaPage() {
                   </div>
                   
                   <Button 
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white transition-all duration-300 transform hover:scale-105 active:scale-95 touch-manipulation"
+                    onClick={() => {
+                      alert(`${product.name} adicionado ao carrinho! 🛒`);
+                    }}
                   >
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Adicionar ao Carrinho

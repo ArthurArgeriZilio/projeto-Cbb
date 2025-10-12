@@ -15,8 +15,8 @@ import {
   MessageCircle,
   Scissors,
   Zap,
-  User,
-  Eye,
+  Sparkles,
+  Layers,
   Mail
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -31,6 +31,7 @@ export default function HomePage() {
       rating: 5.0,
       experience: "8 anos",
       price: "R$ 35",
+      instagram: "@luiz.barbeirooficial",
       calLink: "/agendamento?barbeiro=luiz"
     },
     {
@@ -40,12 +41,13 @@ export default function HomePage() {
       rating: 5.0,
       experience: "6 anos",
       price: "R$ 30",
+      instagram: "@marcos.barbeiro",
       calLink: "/agendamento?barbeiro=marcos"
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 pt-20 pb-8">
+    <div className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-black pt-20 pb-8">
       {/* Main Content */}
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Hero Section */}
@@ -55,10 +57,10 @@ export default function HomePage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2">
+          <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-amber-50 mb-4 sm:mb-6 px-2">
             Dom Luis Barbearia
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-amber-100/80 max-w-2xl mx-auto px-4">
             Profissionais experientes prontos para cuidar do seu visual
           </p>
         </motion.div>
@@ -70,32 +72,32 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-white text-center mb-6 sm:mb-8">Nossos Serviços</h2>
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-amber-50 text-center mb-6 sm:mb-8">Nossos Serviços</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-            <div className="bg-slate-800/30 p-5 sm:p-4 rounded-lg text-center">
-              <Scissors className="h-10 w-10 sm:h-8 sm:w-8 text-orange-500 mx-auto mb-3 sm:mb-2" />
-              <h3 className="text-white font-semibold text-sm sm:text-sm">Corte Masculino</h3>
-              <p className="text-orange-500 font-bold text-lg sm:text-base mt-1">R$ 35</p>
+            <div className="bg-slate-900/50 border border-blue-900/30 p-5 sm:p-4 rounded-lg text-center">
+              <Scissors className="h-10 w-10 sm:h-8 sm:w-8 text-blue-500 mx-auto mb-3 sm:mb-2" />
+              <h3 className="text-amber-50 font-semibold text-sm sm:text-sm">Corte Masculino</h3>
+              <p className="text-blue-400 font-bold text-lg sm:text-base mt-1">R$ 35</p>
             </div>
-            <div className="bg-slate-800/30 p-5 sm:p-4 rounded-lg text-center">
-              <User className="h-10 w-10 sm:h-8 sm:w-8 text-orange-500 mx-auto mb-3 sm:mb-2" />
-              <h3 className="text-white font-semibold text-sm sm:text-sm">Barba</h3>
-              <p className="text-orange-500 font-bold text-lg sm:text-base mt-1">R$ 30</p>
+            <div className="bg-slate-900/50 border border-blue-900/30 p-5 sm:p-4 rounded-lg text-center">
+              <Layers className="h-10 w-10 sm:h-8 sm:w-8 text-blue-500 mx-auto mb-3 sm:mb-2" />
+              <h3 className="text-amber-50 font-semibold text-sm sm:text-sm">Barba</h3>
+              <p className="text-blue-400 font-bold text-lg sm:text-base mt-1">R$ 30</p>
             </div>
-            <div className="bg-slate-800/30 p-5 sm:p-4 rounded-lg text-center">
-              <Zap className="h-10 w-10 sm:h-8 sm:w-8 text-orange-500 mx-auto mb-3 sm:mb-2" />
-              <h3 className="text-white font-semibold text-sm sm:text-sm">Corte + Barba</h3>
-              <p className="text-orange-500 font-bold text-lg sm:text-base mt-1">R$ 60</p>
+            <div className="bg-slate-900/50 border border-blue-900/30 p-5 sm:p-4 rounded-lg text-center">
+              <Zap className="h-10 w-10 sm:h-8 sm:w-8 text-blue-500 mx-auto mb-3 sm:mb-2" />
+              <h3 className="text-amber-50 font-semibold text-sm sm:text-sm">Corte + Barba</h3>
+              <p className="text-blue-400 font-bold text-lg sm:text-base mt-1">R$ 60</p>
             </div>
-            <div className="bg-slate-800/30 p-5 sm:p-4 rounded-lg text-center">
-              <Eye className="h-10 w-10 sm:h-8 sm:w-8 text-orange-500 mx-auto mb-3 sm:mb-2" />
-              <h3 className="text-white font-semibold text-sm sm:text-sm">Sobrancelha</h3>
-              <p className="text-orange-500 font-bold text-lg sm:text-base mt-1">R$ 15</p>
+            <div className="bg-slate-900/50 border border-blue-900/30 p-5 sm:p-4 rounded-lg text-center">
+              <Sparkles className="h-10 w-10 sm:h-8 sm:w-8 text-blue-500 mx-auto mb-3 sm:mb-2" />
+              <h3 className="text-amber-50 font-semibold text-sm sm:text-sm">Sobrancelha</h3>
+              <p className="text-blue-400 font-bold text-lg sm:text-base mt-1">R$ 15</p>
             </div>
-            <div className="bg-slate-800/30 p-5 sm:p-4 rounded-lg text-center col-span-2 md:col-span-1">
-              <Star className="h-10 w-10 sm:h-8 sm:w-8 text-orange-500 mx-auto mb-3 sm:mb-2" />
-              <h3 className="text-white font-semibold text-sm sm:text-sm">Luzes</h3>
-              <p className="text-orange-500 font-bold text-lg sm:text-base mt-1">R$ 80</p>
+            <div className="bg-slate-900/50 border border-blue-900/30 p-5 sm:p-4 rounded-lg text-center col-span-2 md:col-span-1">
+              <Star className="h-10 w-10 sm:h-8 sm:w-8 text-blue-500 mx-auto mb-3 sm:mb-2" />
+              <h3 className="text-amber-50 font-semibold text-sm sm:text-sm">Luzes</h3>
+              <p className="text-blue-400 font-bold text-lg sm:text-base mt-1">R$ 80</p>
             </div>
           </div>
         </motion.div>
@@ -107,48 +109,49 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
+          <h2 className="text-2xl font-bold text-amber-50 text-center mb-8">
             Agende direto com o profissional de sua preferência
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {barbers.map((barber, index) => (
-              <Card key={index} className="bg-slate-800/30 border-slate-700 overflow-hidden">
+              <Card key={index} className="bg-slate-900/50 border-blue-900/30 overflow-hidden">
                 <CardContent className="p-8 sm:p-6">
                   <div className="flex flex-col items-center text-center">
                     {/* Avatar */}
                     <div className="relative mb-5 sm:mb-4">
-                      <Avatar className="h-28 w-28 sm:h-20 sm:w-20 bg-gradient-to-br from-orange-500 to-orange-600">
-                        <AvatarFallback className="text-white text-4xl sm:text-2xl font-bold bg-transparent">
+                      <Avatar className="h-28 w-28 sm:h-20 sm:w-20 bg-gradient-to-br from-blue-600 to-blue-800">
+                        <AvatarFallback className="text-amber-50 text-4xl sm:text-2xl font-bold bg-transparent">
                           {barber.avatar}
                         </AvatarFallback>
                       </Avatar>
-                      <div className="absolute -bottom-1 -right-1 w-8 h-8 sm:w-6 sm:h-6 bg-green-500 rounded-full border-2 border-slate-800"></div>
+                      <div className="absolute -bottom-1 -right-1 w-8 h-8 sm:w-6 sm:h-6 bg-green-500 rounded-full border-2 border-black"></div>
                     </div>
 
                     {/* Name & Specialty */}
-                    <h3 className="text-2xl sm:text-xl font-bold text-white mb-3 sm:mb-2">{barber.name}</h3>
-                    <p className="text-orange-500 font-medium mb-3 sm:mb-2 text-lg sm:text-base">{barber.specialty}</p>
+                    <h3 className="text-2xl sm:text-xl font-bold text-amber-50 mb-3 sm:mb-2">{barber.name}</h3>
+                    <p className="text-blue-400 font-medium mb-3 sm:mb-2 text-lg sm:text-base">{barber.specialty}</p>
 
                     {/* Rating & Experience */}
-                    <div className="flex items-center gap-5 sm:gap-4 mb-5 sm:mb-4">
+                    <div className="flex items-center gap-5 sm:gap-4 mb-4 sm:mb-3">
                       <div className="flex items-center gap-2 sm:gap-1">
                         <Star className="h-6 w-6 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
-                        <span className="text-white font-semibold text-lg sm:text-base">{barber.rating}</span>
+                        <span className="text-amber-50 font-semibold text-lg sm:text-base">{barber.rating}</span>
                       </div>
                       <div className="flex items-center gap-2 sm:gap-1">
-                        <Clock className="h-6 w-6 sm:h-4 sm:w-4 text-slate-400" />
-                        <span className="text-slate-300 text-base sm:text-sm">{barber.experience}</span>
+                        <Clock className="h-6 w-6 sm:h-4 sm:w-4 text-amber-100/60" />
+                        <span className="text-amber-100/80 text-base sm:text-sm">{barber.experience}</span>
                       </div>
                     </div>
 
-                    {/* Price */}
-                    <div className="text-center mb-7 sm:mb-6">
-                      <p className="text-4xl sm:text-3xl font-bold text-orange-500 mb-1">{barber.price}</p>
+                    {/* Instagram */}
+                    <div className="flex items-center gap-2 mb-6 sm:mb-5">
+                      <Instagram className="h-5 w-5 sm:h-4 sm:w-4 text-pink-500" />
+                      <span className="text-amber-100/80 text-base sm:text-sm">{barber.instagram}</span>
                     </div>
 
                     {/* Action Button */}
                     <Link href={barber.calLink} className="w-full">
-                      <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-4 sm:py-3 px-4 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
+                      <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-amber-50 font-semibold py-4 sm:py-3 px-4 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
                         <Calendar className="h-6 w-6 sm:h-5 sm:w-5 mr-2" />
                         Agendar com {barber.name}
                       </Button>
@@ -167,7 +170,7 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl sm:text-2xl font-bold text-white text-center mb-10 sm:mb-8 px-2">Nos Siga nas Redes</h2>
+          <h2 className="text-3xl sm:text-2xl font-bold text-amber-50 text-center mb-10 sm:mb-8 px-2">Nos Siga nas Redes</h2>
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-4 max-w-2xl mx-auto px-2">
             <a
               href="https://www.instagram.com/domluis_barbearia?igsh=dHR4Z2t2ZDBlM3Nn"
@@ -175,7 +178,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-semibold py-4 sm:py-3 px-6 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
+              <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-amber-50 font-semibold py-4 sm:py-3 px-6 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
                 <Instagram className="h-7 w-7 sm:h-5 sm:w-5 mr-2" />
                 Instagram
               </Button>
@@ -186,7 +189,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 sm:py-3 px-6 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-amber-50 font-semibold py-4 sm:py-3 px-6 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
                 <Facebook className="h-7 w-7 sm:h-5 sm:w-5 mr-2" />
                 Facebook
               </Button>
@@ -197,7 +200,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-4 sm:py-3 px-6 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
+              <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-amber-50 font-semibold py-4 sm:py-3 px-6 text-lg sm:text-base transition-all duration-300 transform hover:scale-105 min-h-[56px] sm:min-h-[48px]">
                 <MessageCircle className="h-7 w-7 sm:h-5 sm:w-5 mr-2" />
                 WhatsApp
               </Button>
