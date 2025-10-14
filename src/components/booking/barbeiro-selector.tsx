@@ -15,13 +15,12 @@ interface BarbeiroSelectorProps {
 }
 
 export function BarbeiroSelector({ service, initialBarbeiro, className = "" }: BarbeiroSelectorProps) {
-  const [barbeiroSelecionado, setBarbeiroSelecionado] = useState<"barbeiro1" | "barbeiro2" | null>(null);
+  const [barbeiroSelecionado, setBarbeiroSelecionado] = useState<"barbeiro1" | null>(null);
 
   // Se vier com barbeiro inicial, já seleciona
   useEffect(() => {
     if (initialBarbeiro) {
-      const barbeiroId = initialBarbeiro.toLowerCase() === "luiz" ? "barbeiro1" : "barbeiro2";
-      setBarbeiroSelecionado(barbeiroId);
+      setBarbeiroSelecionado("barbeiro1");
     }
   }, [initialBarbeiro]);
 
@@ -31,12 +30,6 @@ export function BarbeiroSelector({ service, initialBarbeiro, className = "" }: B
       ...calConfig.barbeiros.barbeiro1,
       rating: "4.9",
       avaliacoes: "150+",
-    },
-    {
-      id: "barbeiro2" as const,
-      ...calConfig.barbeiros.barbeiro2,
-      rating: "4.8",
-      avaliacoes: "120+",
     }
   ];
 
@@ -89,13 +82,14 @@ export function BarbeiroSelector({ service, initialBarbeiro, className = "" }: B
         <p className="text-slate-300">Selecione o profissional que você prefere</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {barbeiros.map((barbeiro) => (
-          <Card 
-            key={barbeiro.id}
-            className="bg-slate-800/50 border-slate-700 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group"
-            onClick={() => setBarbeiroSelecionado(barbeiro.id)}
-          >
+      <div className="flex justify-center">
+        <div className="w-full max-w-md">
+          {barbeiros.map((barbeiro) => (
+            <Card 
+              key={barbeiro.id}
+              className="bg-slate-800/50 border-slate-700 hover:border-blue-500/50 transition-all duration-300 cursor-pointer group"
+              onClick={() => setBarbeiroSelecionado(barbeiro.id)}
+            >
             <CardHeader className="text-center pb-4">
               <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
                 {barbeiro.foto}
@@ -150,7 +144,8 @@ export function BarbeiroSelector({ service, initialBarbeiro, className = "" }: B
               </div>
             </CardContent>
           </Card>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className="mt-8 p-4 bg-slate-800/30 rounded-lg border border-slate-700/50">

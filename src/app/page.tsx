@@ -33,17 +33,7 @@ export default function HomePage() {
       price: "R$ 35",
       instagram: "@luiz.barbeirooficial",
       calLink: "/agendamento?barbeiro=luiz"
-    },
-    {
-      name: "Marcos",
-      avatar: "M",
-      specialty: "Barba & Desenho",
-      rating: 5.0,
-      experience: "6 anos",
-      price: "R$ 30",
-      instagram: "@marcos.barbeiro",
-      calLink: "/agendamento?barbeiro=marcos"
-    },
+    }
   ];
 
   return (
@@ -112,10 +102,11 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-amber-50 text-center mb-8">
             Agende direto com o profissional de sua preferência
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {barbers.map((barber, index) => (
-              <Card key={index} className="bg-slate-900/50 border-blue-900/30 overflow-hidden">
-                <CardContent className="p-8 sm:p-6">
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              {barbers.map((barber, index) => (
+                <Card key={index} className="bg-slate-900/50 border-blue-900/30 overflow-hidden">
+                  <CardContent className="p-8 sm:p-6">
                   <div className="flex flex-col items-center text-center">
                     {/* Avatar */}
                     <div className="relative mb-5 sm:mb-4">
@@ -159,7 +150,8 @@ export default function HomePage() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
+              ))}
+            </div>
           </div>
         </motion.div>
 
